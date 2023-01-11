@@ -117,7 +117,7 @@ server <- function(input, output) {
   
   observeEvent(input$add_output, {
     
-    if(!input$input_label %in% inputs$id) {
+    if(!input$output_label %in% outputs$id) {
       outputs$input <- append(outputs$input,      paste0("render", input$input_type, "('",
                                                        input$input_label, "', '", input$input_label, "')"))    
       
